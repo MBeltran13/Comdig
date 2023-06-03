@@ -1,4 +1,4 @@
-datos = readmatrix('datos_cohete.csv');
+datos = readmatrix('SaveDataLaunch.csv');
 
 % Extrae las columnas de datos
 t = datos(:, 1);
