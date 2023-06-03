@@ -29,7 +29,7 @@ void setup()
 
   radio.begin();
   radio.openWritingPipe(address);
-  radio.setChannel(110);
+  radio.setChannel(90);
   radio.setDataRate(RF24_250KBPS);
   radio.setPALevel(RF24_PA_MIN);
   /*pinMode(7, OUTPUT); // establecer el pin del LED como salida
@@ -66,19 +66,9 @@ void loop()
   radio.write(datos, sizeof(datos));
   Serial.println(datos[7]);
 
-      Serial.print(AcX);
-    Serial.print(",");
-    Serial.print(AcY);
-    Serial.print(",");
-    Serial.print(AcZ);
-    Serial.print(",");
-    Serial.print(GyX);
-    Serial.print(",");
-    Serial.print(GyY);
-    Serial.print(",");
-    Serial.print(GyZ);
-    Serial.print(",");
-    Serial.println(ALTITUD);
+  Serial.print(AcX); Serial.print(","); Serial.print(AcY); Serial.print(","); Serial.print(AcZ); Serial.print(",");
+  Serial.print(GyX); Serial.print(","); Serial.print(GyY); Serial.print(","); Serial.print(GyZ); Serial.print(",");
+  Serial.println(ALTITUD);
   
-delay(50); // Esperar 1 segundos antes de tomar otra muestra
+  delay(50); // Esperar 50 milisegundos antes de tomar otra muestra
 }
