@@ -45,7 +45,7 @@ class SerialPlot(QWidget):
         self.showMaximized()
 
         # Configuración del puerto serial
-        self.ser = serial.Serial('COM3', 9600)
+        self.ser = serial.Serial('CO6', 9600)
         self.ser.flush()
 
         # Variables para almacenar los datos
