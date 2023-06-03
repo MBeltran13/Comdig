@@ -16,7 +16,7 @@ void setup()
   Serial.begin(9600);
   radio.begin();
   radio.openReadingPipe(0, address);
-  radio.setChannel(110);
+  radio.setChannel(90);
   radio.setDataRate(RF24_250KBPS);
   radio.setPALevel(RF24_PA_MIN);
   radio.startListening(); 
@@ -36,18 +36,8 @@ void loop()
     GyZ = datos[5];
     ALTITUD = datos[6];
 
-    Serial.print(AcX);
-    Serial.print(",");
-    Serial.print(AcY);
-    Serial.print(",");
-    Serial.print(AcZ);
-    Serial.print(",");
-    Serial.print(GyX);
-    Serial.print(",");
-    Serial.print(GyY);
-    Serial.print(",");
-    Serial.print(GyZ);
-    Serial.print(",");
+    Serial.print(AcX); Serial.print(","); Serial.print(AcY); Serial.print(","); Serial.print(AcZ); Serial.print(",");
+    Serial.print(GyX); Serial.print(","); Serial.print(GyY); Serial.print(","); Serial.print(GyZ); Serial.print(",");
     Serial.println(ALTITUD);
     
   }
